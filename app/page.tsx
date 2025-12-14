@@ -1,9 +1,12 @@
+import About from "@/components/about/About";
+import MyLink from "@/components/components/MyLink";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans dark:bg-black">
-        HI
-    </div>
+  <>
+  <About/>
+  </>
   );
 }
