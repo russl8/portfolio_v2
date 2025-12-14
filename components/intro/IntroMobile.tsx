@@ -2,7 +2,7 @@ import Headshot from "../components/Headshot";
 
 export default function IntroMobile() {
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden mb-10">
       <Headshot size={100} />
 
       <h1 className="font-bold text-2xl flex space-x-4">
