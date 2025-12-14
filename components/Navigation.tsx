@@ -2,7 +2,7 @@ import Intro from "./intro/Intro";
 
 const Navigation = () => {
   return (
-    <nav className="text-subtext">
+    <nav className="text-subtext lg:fixed">
       <Intro />
       <div className="pt-10 hidden lg:flex flex-col">
         <NavLink text="About" />

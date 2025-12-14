@@ -1,9 +1,10 @@
 import MyLink from "../components/MyLink";
+import Section from "../components/Section";
 
 const About = () => {
   return (
-    <section className="">
-      <div className="min-h-screen font-sans text-secondary">
+    <Section sectionName="About">
+      <div className=" font-sans text-secondary">
         <p>
           I'm a Computer Science student at York University, and I generally
           enjoy building software that is <b>functional</b>, <b>maintainable</b>
@@ -20,9 +21,9 @@ const About = () => {
           from multiple source systems using Spring Boot and Apache Spark.
         </p>
         <br></br>
-        <p>I have</p>
+        <p></p>
       </div>
-    </section>
+    </Section>
   );
 };
 
