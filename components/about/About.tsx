@@ -1,9 +1,12 @@
 import MyLink from "../components/MyLink";
 import Section from "../components/Section";
+import { useNavContext } from "../context/NavContext";
 
 const About = () => {
+
+  const context = useNavContext();
   return (
-    <Section sectionName="About">
+    <Section sectionName="about" onEnter={context.setCurrentSection}>
       <div className=" font-sans text-secondary">
         <p>
           I'm a Computer Science student at York University, and I
