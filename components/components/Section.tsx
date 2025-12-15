@@ -1,15 +1,44 @@
-interface SectionProps {
-  sectionName: string;
-  children: React.ReactNode;
-}
-const Section = ({ sectionName, children }: SectionProps) => {
-  return (
-    <section className="relative">
+import { useEffect, useRef } from "react";
+import type { SectionName } from "../lib/types";
 
-      <p className="lg:hidden text-md font-extrabold font-mono text-subheading w-[100vw]
+interface SectionProps {
+  sectionName: SectionName;
+  children: React.ReactNode;
+  onEnter: (sectionName: SectionName) => void;
+}
+const Section = ({ sectionName, children, onEnter }: SectionProps) => {
+  const ref = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current || !onEnter) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        console.log(sectionName);
+
+        if (entry.isIntersecting) {
+          onEnter(sectionName);
+        }
+      },
+      {
+        root: null,
+        threshold: 0.6,
+      },
+    );
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [sectionName, onEnter]);
+
+  return (
+    <section ref={ref} className="relative scroll-mt-24 mb-24" id={sectionName}>
+      <p
+        className="lg:hidden text-md font-extrabold font-mono text-subheading w-[100vw]
        sticky top-0 bg-background/85 backdrop-blur-sm pt-4 pb-6
-      ">
-        {sectionName.toUpperCase()}</p>
+      "
+      >
+        {sectionName.toUpperCase()}
+      </p>
       {children}
     </section>
   );

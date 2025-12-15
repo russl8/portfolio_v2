@@ -1,0 +1,1 @@
+export type SectionName = "about" | "experience" | "projects"
