@@ -6,11 +6,11 @@ export default function IntroDesktop() {
       <Headshot size={150} />
 
       <h1 className="font-bold flex space-x-4">
-        <span className="text-header text-4xl xl:text-6xl">Russell Liu</span>
-        <span className="text-subheading xl:text-xl self-end">劉丞羲</span>
+        <p className="text-header text-5xl ">Russell Liu</p>
+        <p className="text-subheading text-xl self-end">劉丞羲</p>
       </h1>
 
-      <p className="text-secondary">Currently @ RBC Borealis</p>
+      <p className="text-secondary text-xl">Currently @ RBC Borealis</p>
     </div>
   );
 }
