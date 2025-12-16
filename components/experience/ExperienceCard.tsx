@@ -13,13 +13,13 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     <div
       tabIndex={0}
       className="
-      group
+        group
         experience-card
-        flex flex-row p-4 mb-6 w-160 rounded-md
+        lg:flex lg:flex-row p-4 mb-6 lg:w-160 rounded-md
         text-secondary select-none cursor-pointer
         transition-opacity duration-250
         hover:bg-secondary/15
-        outline-none
+        outline-none        
       "
     >
       {/* icon */}
@@ -32,15 +32,15 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         />
       </div>
 
-      
       {/* company, position, date */}
       <div className="w-full">
         <span className="flex flex-row justify-between">
           <p className="flex flex-row text-header text-lg font-semibold relative">
             {experience.company}
-            <MoveUpRight 
-            className="ml-1 w-4 font-bold align-bottom self-end
-            group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200"/>
+            <MoveUpRight
+              className="ml-1 w-4 font-bold align-bottom self-end
+            group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200"
+            />
           </p>
           <p className="text-sm font-semibold pt-1">
             {experience.startMonth}/{experience.startYear} -{" "}
