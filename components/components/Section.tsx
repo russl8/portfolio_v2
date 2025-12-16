@@ -22,7 +22,7 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
       },
       {
         root: null,
-        threshold: 0.6,
+        threshold: 0.8,
       },
     );
     observer.observe(ref.current);
@@ -31,10 +31,10 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
   }, [sectionName, onEnter]);
 
   return (
-    <section ref={ref} className="relative scroll-mt-24 mb-24" id={sectionName}>
+    <section ref={ref} className="relative scroll-mt-24 mb-32" id={sectionName}>
       <p
-        className="lg:hidden text-md font-extrabold font-mono text-subheading w-[100vw]
-       sticky top-0 bg-background/85 backdrop-blur-sm pt-4 pb-6
+        className="z-2 lg:hidden text-md font-extrabold font-mono text-subheading w-[screen]
+       sticky top-0 bg-background shadow-2xs backdrop-blur-md pt-4 pb-6 
       "
       >
         {sectionName.toUpperCase()}

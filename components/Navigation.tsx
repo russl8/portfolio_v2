@@ -25,31 +25,27 @@ const NavLink = ({ linkText }: NavLinkProps) => {
   const isActive = currentSection === linkText;
 
   return (
-    // <Link  scroll={false}>
-  <a
-  href={`#${linkText}`}
-    className={`
+    <a
+      href={`#${linkText}`}
+      className={`
       text-secondary flex flex-row items-center group my-2
       hover:cursor-pointer hover:text-subheading
       ${isActive ? "text-subheading" : ""}
     `}
-  >
-    <hr
-      className={`
-        h-px bg-secondary flex-1 mr-2 max-w-6
-        group-hover:max-w-12
-        transition-[width] duration-200 ease-in-out
-        ${isActive ? "max-w-12" : ""}
-      `}
-    />
-    <p className="text-xs font-extrabold font-mono">
-      {linkText.toUpperCase()}
-    </p>
-  </a>
-// </Link>
-
+    >
+      <hr
+        className={`
+          h-px bg-secondary flex-1 mr-2 max-w-10
+          group-hover:max-w-20
+          transition-[max-width] duration-300 ease-in-out
+          ${isActive ? "max-w-20" : ""}
+        `}
+      />
+      <p className="text-sm font-extrabold font-mono">
+        {linkText.toUpperCase()}
+      </p>
+    </a>
   );
 };
-
 
 export default Navigation;

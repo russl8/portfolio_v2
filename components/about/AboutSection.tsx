@@ -2,7 +2,7 @@ import MyLink from "../components/MyLink";
 import Section from "../components/Section";
 import { useNavContext } from "../context/NavContext";
 
-const About = () => {
+const AboutSection = () => {
 
   const context = useNavContext();
   return (
@@ -37,4 +37,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;
