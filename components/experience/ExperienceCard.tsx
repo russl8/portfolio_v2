@@ -2,11 +2,13 @@ import Image from "next/image";
 import type { Experience } from "../lib/types";
 import { MoveUpRight } from "lucide-react";
 
+
 interface ExperienceCardProps {
   experience: Experience;
+  onClick:()=>void;
 }
 
-const ExperienceCard = ({ experience }: ExperienceCardProps) => {
+const ExperienceCard = ({ experience, onClick }: ExperienceCardProps) => {
   // mobile: full page, remove hover animation
   return (
     // ExperienceCard.tsx
@@ -21,6 +23,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         hover:bg-secondary/15
         outline-none        
       "
+      onClick={onClick}
     >
       {/* icon */}
       <div className="block w-15 aspect-square mr-4 relative rounded-md overflow-hidden">
