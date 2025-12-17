@@ -12,3 +12,10 @@ export type Experience = {
     websiteUrl: string,
     logoPath: string,
 }
+
+export type Project = {
+    name: string,
+    description: string,
+    websiteUrl:string,
+    technologies: Array<String>
+}
