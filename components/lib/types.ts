@@ -17,5 +17,5 @@ export type Project = {
     name: string,
     description: string,
     websiteUrl:string,
-    technologies: Array<String>
+    technologies: Array<string>
 }
