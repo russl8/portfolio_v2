@@ -56,7 +56,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         {/* icon */}
         <div
           className={cn(
-            "block w-15 aspect-square relative rounded-md overflow-hidden mr-4 self-center",
+            "block w-15 aspect-square relative rounded-md overflow-hidden mr-4 self-center mb-2",
           )}
         >
           <Image
@@ -72,7 +72,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           <span className="flex flex-row justify-between">
             <p
               className={cn(
-                "flex flex-row text-header text-sm md:text-lg font-semibold relative",
+                "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
                 // isModal && ["text-xl"],
               )}
             >
@@ -85,11 +85,11 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                     " ",
                   ],
                   isModal && ["hidden"],
-                  !isModal &&" sm:block"
+                  !isModal &&"  hidden lg:block"
                 )}
               />
             </p>
-            <p className={cn(["text-xs md:text-sm font-semibold pt-1 text-secondary"])}>
+            <p className={cn(["text-xs lg:text-sm font-semibold text-secondary"])}>
               {experience.startMonth}/{experience.startYear} -{" "}
               {experience.endMonth}/{experience.endYear}
             </p>
