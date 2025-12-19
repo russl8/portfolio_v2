@@ -2,16 +2,18 @@ import Link from "next/link";
 import { useNavContext } from "./context/NavContext";
 import Intro from "./intro/Intro";
 import { SectionName } from "./lib/types";
+import Socials from "./intro/Socials";
 
 const Navigation = () => {
   return (
     <nav className="text-subtext lg:fixed">
       <Intro />
-      <div className="pt-10 hidden lg:flex flex-col">
+      <div className="pt-10 pb-20 xl:pb-40 hidden lg:flex flex-col">
         <NavLink linkText="about" />
         <NavLink linkText="experience" />
         <NavLink linkText="projects" />
       </div>
+      <Socials/>
     </nav>
   );
 };
