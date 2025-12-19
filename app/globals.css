@@ -85,6 +85,21 @@ html {
   opacity: 1;
 }
 
+html,
+body {
+  min-height: 100%;
+  background: #000; /* fallback so overscroll never shows white */
+  background-image: var(--background-grad) ;
+
+}
+
+html {
+  background-image: var(--background-grad);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(0% 0 0);
