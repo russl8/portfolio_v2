@@ -33,8 +33,8 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
   return (
     <section ref={ref} className="relative scroll-mt-24 mb-32" id={sectionName}>
       <p
-        className="z-2 lg:hidden text-md font-extrabold font-mono text-subheading w-[screen]
-       sticky top-0 bg-black  pt-4 pb-6 
+        className="z-2 lg:hidden text-md font-extrabold font-mono   -mx-6 px-6 text-subheading w-[screen]
+       sticky top-0 pt-4 pb-6  backdrop-blur-lg
       "
       >
         {sectionName.toUpperCase()}
