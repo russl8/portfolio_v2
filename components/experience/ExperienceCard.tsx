@@ -47,8 +47,8 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             "cursor-pointer hover:bg-secondary/15 hover:shadow-md",
           ],
           isModal && [
-            "max-w-xs lg:max-w-3xl",
-            "scale-110",
+            "mx-10 lg:mx-0",
+            "lg:scale-110",
             "bg-linear-to-br from-black via-gray-900  to-black text-white",
           ],
         )}
@@ -89,13 +89,17 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                 )}
               />
             </p>
-            <p className={cn(["text-xs lg:text-sm font-semibold text-secondary"])}>
+            <p className={cn(["text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center"])}>
               {experience.startMonth}/{experience.startYear} -{" "}
               {experience.endMonth}/{experience.endYear}
             </p>
             {/* add link icon with onhover animation */}
           </span>
           <p className="text-secondary text-xs sm:text-sm">{experience.position}</p>
+          <p className={cn(["text-xs lg:text-sm text-secondary block lg:hidden"])}>
+              {experience.startMonth}/{experience.startYear} -{" "}
+              {experience.endMonth}/{experience.endYear}
+            </p>
           {/* put this in a modal */}
           <p className={cn("text-sm pt-2 text-secondary", !isModal && ["hidden"])}>
             {experience.description}
