@@ -9,7 +9,7 @@ const AboutSection = () => {
     <Section sectionName="about" onEnter={context.setCurrentSection}>
       <div className=" font-sans text-secondary">
         <p>
-          I'm a Computer Science student at York University, and I
+          Hi! I'm a Computer Science student at York University, and I
           enjoy building software that is <b>functional</b>, <b>maintainable</b>
           , and <b>fault-tolerant</b>.
         </p>

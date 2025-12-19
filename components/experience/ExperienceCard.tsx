@@ -40,17 +40,16 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         className={cn(
           "group rounded-lg bg-gray-900/40 text-secondary",
           "transition-all duration-500",
-          "lg:flex lg:flex-row p-6",
+          "lg:flex lg:flex-row px-4 py-2 md:py-6",
 
           !isModal && [
-            "mb-6 lg:w-160 experience-card ",
+            "mb-6 lg:w-170 experience-card ",
             "cursor-pointer hover:bg-secondary/15 hover:shadow-md",
           ],
           isModal && [
-            "mx-auto my-auto",
-            "max-w-3xl",
-            // "w-160",
-            "bg-linear-to-br from-black via-gray-900 to-black p-8 text-white",
+            "max-w-xs lg:max-w-3xl",
+            "scale-110",
+            "bg-linear-to-br from-black via-gray-900  to-black text-white",
           ],
         )}
       >
@@ -73,8 +72,8 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           <span className="flex flex-row justify-between">
             <p
               className={cn(
-                "flex flex-row text-header text-lg font-semibold relative",
-                isModal && ["text-xl"],
+                "flex flex-row text-header text-sm md:text-lg font-semibold relative",
+                // isModal && ["text-xl"],
               )}
             >
               {experience.company}
@@ -83,20 +82,22 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                   [
                     "ml-1 w-4 font-bold align-bottom self-end",
                     "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
+                    " ",
                   ],
                   isModal && ["hidden"],
+                  !isModal &&" sm:block"
                 )}
               />
             </p>
-            <p className={cn(["text-sm font-semibold pt-1"])}>
+            <p className={cn(["text-xs md:text-sm font-semibold pt-1 text-secondary"])}>
               {experience.startMonth}/{experience.startYear} -{" "}
               {experience.endMonth}/{experience.endYear}
             </p>
             {/* add link icon with onhover animation */}
           </span>
-          <p>{experience.position}</p>
+          <p className="text-secondary text-xs sm:text-sm">{experience.position}</p>
           {/* put this in a modal */}
-          <p className={cn("text-sm pt-2", !isModal && ["hidden"])}>
+          <p className={cn("text-sm pt-2 text-secondary", !isModal && ["hidden"])}>
             {experience.description}
           </p>
         </div>
