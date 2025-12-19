@@ -48,7 +48,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           ],
           isModal && [
             "max-w-xs lg:max-w-3xl",
-            "scale-105",
+            "scale-110",
             "bg-linear-to-br from-black via-gray-900  to-black text-white",
           ],
         )}
@@ -82,9 +82,10 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
                   [
                     "ml-1 w-4 font-bold align-bottom self-end",
                     "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
-                    "hidden sm:block",
+                    " ",
                   ],
                   isModal && ["hidden"],
+                  !isModal &&" sm:block"
                 )}
               />
             </p>

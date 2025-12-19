@@ -17,13 +17,13 @@ const ProjectSection = () => {
    */
   return (
 <Section sectionName="projects" onEnter={context.setCurrentSection}>
-  <div className="rounded-xl border border-white/5 bg-black/30 backdrop-blur-sm">
-    <table className="w-full border-collapse">
-      <thead className="text-subheading text-sm">
-        <tr className="border-b border-white/5">
-          <th className="py-3 text-left font-semibold">Project</th>
-          <th className="py-3 text-left font-semibold">Description</th>
-          <th className="py-3 text-left font-semibold">Built With</th>
+  <div className="rounded-xl  backdrop-blur-sm">
+    <table className="w-full">
+      <thead className="text-subheading text-base font-bold">
+        <tr className="">
+          <th className="py-3 text-left">Project</th>
+          <th className="py-3 px-2 text-left">Description</th>
+          <th className="py-3 text-left">Built with</th>
         </tr>
       </thead>
       <tbody className="text-secondary">

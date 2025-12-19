@@ -2,23 +2,24 @@ import type { Project } from "./types";
 
 export const projects: Project[] = [
   {
-    name: "AI Workout Tracker",
+    name: "MiniTS",
     description:
-      "A full-stack workout tracking platform with AI-driven feedback, interactive progress visualizations, and analytics comparing weekly performance against long-term trends. Designed to encourage consistency and optimize training decisions.",
-    websiteUrl: "",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Redis", "S3"],
-  },
-  {
-    name: "MiniTS Compiler",
-    description:
-      "A compiler for a TypeScript-inspired language supporting classes, control flow, lists, and static type checking. Implements lexical scoping, variable shadowing, and AST-based semantic analysis.",
+      "TypeScript-inspired language supporting classes, control flow, lists, and static type checking. Additionally, lexical scoping, variable shadowing, and AST-based semantic analysis.",
     websiteUrl: "",
     technologies: ["Java", "ANTLR"],
   },
   {
+    name: "Untitled",
+    description:
+      "Workout tracker with streak visualizations, fine-tuned LLM (OpenAI) feedback, storage + auth, and caching/rate-limiting.",
+    websiteUrl: "",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Redis", "S3"],
+  },
+
+  {
     name: "Video Processing Service",
     description:
-      "A cloud-native video platform enabling authenticated users to upload and view videos. Automatically transcodes uploads to 360p using a serverless pipeline built on Google Cloud services.",
+      "Cloud-native video upload/playback service leveraging Pub/Sub and Cloud Run to trigger automated 360p video transcoding.",
     websiteUrl: "",
     technologies: [
       "TypeScript",
@@ -31,15 +32,15 @@ export const projects: Project[] = [
   {
     name: "BeGrate",
     description:
-      "A responsive text-blogging platform where users record daily moments of gratitude. Supports public and private posts, likes, comments, and full CRUD functionality with authenticated access control.",
+      "Blog site supporting authenticated public/private post creation, as well as liking and commenting.",
     websiteUrl: "",
     technologies: ["React", "Express", "MongoDB"],
   },
   {
     name: "YorkRMC",
     description:
-      "A Chrome extension that scrapes RateMyCourses.io and displays course reviews directly on university course pages for faster, in-context access to student feedback.",
+      "A Chrome extension that scrapes RateMyCourses.io and displays course reviews directly on university course page.",
     websiteUrl: "",
-    technologies: ["JavaScript"],
+    technologies: ["JavaScript", "Express"],
   },
 ];
