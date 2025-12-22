@@ -12,7 +12,7 @@ export const projects: Project[] = [
     name: "Workout Tracker",
     description:
       "Featuring streak graph visualizations, fine-tuned LLM (OpenAI) feedback, storage + auth, and caching/rate-limiting.",
-    websiteUrl: "https://github.com/russl8/untitled",
+    websiteUrl: "https://github.com/russl8/untitled/",
     technologies: ["Next.js", "TypeScript", "Python","MongoDB", "Redis", "S3"],
   },
 
