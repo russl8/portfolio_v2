@@ -9,13 +9,7 @@ const AboutSection = () => {
     <Section sectionName="about" onEnter={context.setCurrentSection}>
       <div className=" font-sans text-secondary">
         <p>
-          Hi! I'm a Computer Science student at York University, and I
-          enjoy building software that is <b>functional</b>, <b>maintainable</b>
-          , and <b>fault-tolerant</b>.
-        </p>
-        <br></br>
-        <p>
-          I am currently working at{" "}
+          Hi! I'm a Computer Science student at York University, currently working at{" "}
           <MyLink
             text="RBC Borealis"
             url="https://rbcborealis.com/applications/lumina-platform/"
@@ -25,7 +19,7 @@ const AboutSection = () => {
         </p>
         <br></br>
         <p>
-        I’ve had the opportunity to build software across a range of contexts, from
+        I’ve had the opportunity to build software across a range of contexts from
         student-led initiatives like my school’s hackathon to internships across
         multiple teams at larger organizations and startups.
       </p>
