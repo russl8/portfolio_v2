@@ -55,7 +55,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         {/* icon */}
         <div
           className={cn(
-            "block w-15 aspect-square relative rounded-md overflow-hidden mr-4 self-center mb-2",
+            "block w-15 aspect-square relative rounded-md overflow-hidden mr-4 self-center",
           )}
         >
           <Image
