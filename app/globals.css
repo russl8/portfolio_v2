@@ -83,7 +83,7 @@ html {
 html,
 body {
   min-height: 100%;
-  background: #23232b; 
+  background: rgb(27, 34, 33); 
 
 }
 
@@ -113,8 +113,6 @@ html {
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
-
-  --background-grad: var(--color-gray-400)
 }
 
 

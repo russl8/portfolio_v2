@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         tabIndex={0}
         onClick={(e) => isModal && e.stopPropagation()}
         className={cn(
-          "group rounded-lg bg-gray-900/40 text-secondary",
+          "group rounded-lg bg-black/20 text-secondary",
           "transition-all duration-500",
           "lg:flex lg:flex-row px-4 py-2 md:py-6",
 
@@ -48,8 +48,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           ],
           isModal && [
             "mx-10 lg:mx-0",
-            "lg:scale-110",
-            "bg-linear-to-br from-black via-gray-900  to-black text-white",
+            "bg-white/10 backdrop-blur-3xl",
           ],
         )}
       >
