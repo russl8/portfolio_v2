@@ -38,24 +38,24 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         tabIndex={0}
         onClick={(e) => isModal && e.stopPropagation()}
         className={cn(
-          "group rounded-lg bg-black/20 text-secondary",
+          "group rounded-xs bg-accent/5 text-secondary",
           "transition-all duration-500",
           "lg:flex lg:flex-row px-4 py-2 md:py-6",
 
           !isModal && [
             "mb-6 lg:w-170 experience-card ",
-            "cursor-pointer hover:bg-secondary/15 hover:shadow-md",
+            "cursor-pointer hover:bg-accent/15 hover:shadow-md",
           ],
           isModal && [
             "mx-10 lg:mx-0",
-            "bg-white/10 backdrop-blur-3xl",
+            "bg-accent/25 backdrop-blur-3xl",
           ],
         )}
       >
         {/* icon */}
         <div
           className={cn(
-            "block w-15 aspect-square relative rounded-md overflow-hidden mr-4 self-center",
+            "block w-15 aspect-square relative rounded-xs  overflow-hidden mr-4 self-center",
           )}
         >
           <Image

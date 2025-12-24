@@ -9,7 +9,7 @@ export default function IntroMobile() {
         <p className="text-header text-4xl">Russell Liu</p>
         <p className="text-subheading self-end">劉丞羲</p>
       </h1>
-      <p className="text-secondary">Currently @ RBC Borealis</p>
+      {/* <p className="text-secondary">Currently @ RBC Borealis</p> */}
     </div>
   );
 }

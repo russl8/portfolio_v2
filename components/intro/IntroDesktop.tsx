@@ -10,7 +10,7 @@ export default function IntroDesktop() {
         <p className="text-subheading text-xl self-end">劉丞羲</p>
       </h1>
 
-      <p className="text-secondary text-xl">Currently @ RBC Borealis</p>
+      {/* <p className="text-secondary text-xl">Currently @ RBC Borealis</p> */}
     </div>
   );
 }

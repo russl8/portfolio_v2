@@ -3,6 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -13,7 +14,7 @@
   --color-subheading: #E0E0E0;
   --color-body: #E0E0E0;  
   --color-secondary: #7E7E7E;
-  --color-accent: #019b81;
+  --color-accent: #9dede0;
   --color-gray-grad: linear-gradient(black, gray)
 ;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -84,7 +85,7 @@ html,
 body {
   min-height: 100%;
   background: #1b2221;
-  w : #019b81
+  w : #9dede0;
 }
 
 html {

@@ -4,8 +4,8 @@ const SkillButton = ({ skill }: { skill: string }) => {
       className="
         text-xs
         px-2 py-1
-        rounded-md
-        bg-gray-800/80
+        rounded-xs
+        bg-accent/25
         text-subheading
         backdrop-blur-sm
         transition-colors

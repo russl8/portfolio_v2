@@ -16,7 +16,7 @@ const ProjectRow = ({ project }: ProjectCardProps) => {
       {/* make this an actual link */}
       <td className="py-4  my-auto text-subheading text-sm font-semibold">
         <Link href={project.websiteUrl} target="_blank">
-          <span className="group hover:cursor-pointer hover:text-accent/80 transition-colors duration-250 py-4 ">
+          <span className="group hover:cursor-pointer hover:text-accent/90 transition-colors duration-250 py-4 ">
             {project.name}
             <MoveUpRight
               className={cn(
