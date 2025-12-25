@@ -9,7 +9,9 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "RBC Borealis",
     description:
-      "Built and maintained core batch-processing systems and internal services supporting data ingestion and operational workflows.",
+      "Platform Engineering — Took a batch processing system for event count metadata to production, adding features such as audit trails, backfills, reprocessing, and soft deletions. Also took a Python-based BSDRF chargeback document automation from 0→1, leading design, MVP implementation, deployment, and PIV.",
+
+    // "Built and maintained core batch-processing systems and internal services supporting data ingestion and operational workflows.",
     technologies: [
       "Java",
       "Spring Boot",
@@ -29,14 +31,8 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "Aeroport AI",
     description:
-      "Developed document processing pipelines and contributed features to a real-time monitoring platform.",
-    technologies: [
-      "TypeScript",
-      "React",
-      "Vert.x",
-      "PostgreSQL",
-      "Python",
-    ],
+      "Developed document processing pipelines using OCR technologies, added features to existing services, and migrated UI from Angular to React.",
+    technologies: ["TypeScript", "React", "Vert.x", "PostgreSQL", "Python"],
     websiteUrl: "https://www.aeroport.ai",
     logoPath: "/aeroportailogo.jpeg",
   },
@@ -48,11 +44,8 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "RBC Borealis",
     description:
-      "Built automation pipelines to extract structured data from unstructured documents.",
-    technologies: [
-      "Python",
-      "AWS SageMaker",
-    ],
+      "Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).",
+    technologies: ["Python", "AWS SageMaker"],
     websiteUrl: "https://www.rbcborealis.com",
     logoPath: "/rbcborealislogo.jpeg",
   },
@@ -64,12 +57,8 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "Royal Bank of Canada (RBC)",
     description:
-      "Developed a prototype enabling natural-language querying over relational data.",
-    technologies: [
-      "Python",
-      "LangChain",
-      "PostgreSQL",
-    ],
+      "Leveraged vector databases to build a proof of concept for a text-to-SQL application.",
+    technologies: ["Python", "LangChain", "PostgreSQL"],
     websiteUrl: "https://www.rbc.com",
     logoPath: "/rbclogo.jpeg",
   },
@@ -81,13 +70,9 @@ export const experience: Array<Experience> = [
     position: "Software Developer",
     company: "Computing Students Hub' at York University",
     description:
-      "Built and maintained internal web tools supporting student services.",
-    technologies: [
-      "TypeScript",
-      "React",
-      "Next.js",
-    ],
+      "Built and maintained internal web tools supporting student services, including a social platform, hackathon landing pages, and dashboards used by 400+ users.",
+    technologies: ["TypeScript", "React", "Next.js"],
     websiteUrl: "https://2024.ctrlhackdel.com/",
     logoPath: "/cshublogo.jpeg",
-  }
+  },
 ];
