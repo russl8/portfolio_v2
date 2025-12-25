@@ -40,7 +40,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         className={cn(
           "group rounded-xs bg-accent/5 text-secondary",
           "transition-all duration-500",
-          "lg:flex lg:flex-row px-4 py-2 md:py-6",
+          "lg:flex lg:flex-row px-4 py-6",
 
           !isModal && [
             "mb-6 lg:w-170 experience-card ",
