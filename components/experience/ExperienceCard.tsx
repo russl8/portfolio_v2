@@ -3,6 +3,7 @@ import type { Experience } from "../lib/types";
 import { MoveUpRight } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -47,8 +48,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             "cursor-pointer hover:bg-accent/15 hover:shadow-md",
           ],
           isModal && [
-            "mx-10 ",
-            "bg-accent/25 backdrop-blur-3xl",
+            "lg:w-162.5 lg:mx-0 mx-4  bg-accent/25 backdrop-blur-3xl",
           ],
         )}
       >
@@ -69,38 +69,64 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         {/* company, position, date */}
         <div className="w-full">
           <span className="flex flex-row justify-between">
-            <p
-              className={cn(
-                "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
-                // isModal && ["text-xl"],
-              )}
+            <Link
+
+              target="_blank"
+              href={experience.websiteUrl}
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
             >
-              {experience.company}
-              <MoveUpRight
+              <p
                 className={cn(
-                  [
-                    "ml-1 w-4 font-bold align-bottom self-end",
-                    "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
-                    " ",
-                  ],
-                  isModal && ["hidden"],
-                  !isModal &&"  hidden lg:block"
+                  "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
+                  "hover:opacity-40 transition-opacity duration-300"
+
+                  // isModal && ["text-xl"],
                 )}
-              />
-            </p>
-            <p className={cn(["text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center"])}>
+              >
+                {experience.company}
+                <MoveUpRight
+                  className={cn(
+                    [
+                      "ml-1 w-4 font-bold align-bottom self-end",
+                      "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
+                      " ",
+                    ],
+                    isModal && ["hidden"],
+                    !isModal && "  hidden lg:block",
+                  )}
+                />
+              </p>
+            </Link>
+            <p
+              className={cn([
+                "text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center",
+              ])}
+            >
               {experience.startMonth}/{experience.startYear} -{" "}
               {experience.endMonth}/{experience.endYear}
             </p>
             {/* add link icon with onhover animation */}
           </span>
-          <p className="text-secondary text-xs sm:text-sm">{experience.position}</p>
-          <p className={cn(["text-xs lg:text-sm text-secondary block lg:hidden"])}>
-              {experience.startMonth}/{experience.startYear} -{" "}
-              {experience.endMonth}/{experience.endYear}
-            </p>
+          <p className="text-secondary text-xs sm:text-sm">
+            {experience.position}
+          </p>
+          <p
+            className={cn([
+              "text-xs lg:text-sm text-secondary block lg:hidden",
+            ])}
+          >
+            {experience.startMonth}/{experience.startYear} -{" "}
+            {experience.endMonth}/{experience.endYear}
+          </p>
           {/* put this in a modal */}
-          <p className={cn("text-sm pt-2 text-secondary", !isModal && ["hidden"])}>
+          <p
+            className={cn(
+              "text-sm pt-2 text-secondary",
+              !isModal && ["hidden"],
+            )}
+          >
             {experience.description}
           </p>
         </div>
