@@ -44,7 +44,7 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "RBC Borealis",
     description:
-      "Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).",
+      "Incubator - Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).",
     technologies: ["Python", "AWS SageMaker"],
     websiteUrl: "https://www.rbcborealis.com",
     logoPath: "/rbcborealislogo.jpeg",
@@ -57,7 +57,7 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "Royal Bank of Canada (RBC)",
     description:
-      "Leveraged vector databases to build a proof of concept for a text-to-SQL application.",
+      "Enterprise Data Architecture - Leveraged vector databases to build a proof of concept for a text-to-SQL application.",
     technologies: ["Python", "LangChain", "PostgreSQL"],
     websiteUrl: "https://www.rbc.com",
     logoPath: "/rbclogo.jpeg",

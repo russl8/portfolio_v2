@@ -47,7 +47,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             "cursor-pointer hover:bg-accent/15 hover:shadow-md",
           ],
           isModal && [
-            "mx-10 lg:mx-0",
+            "mx-10 ",
             "bg-accent/25 backdrop-blur-3xl",
           ],
         )}
