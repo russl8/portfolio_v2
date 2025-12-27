@@ -22,7 +22,7 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
       },
       {
         root: null,
-        threshold: 0.8,
+        threshold: 0.85,
       },
     );
     observer.observe(ref.current);
@@ -31,7 +31,7 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
   }, [sectionName, onEnter]);
 
   return (
-    <section ref={ref} className="relative scroll-mt-24 mb-32" id={sectionName}>
+    <section ref={ref} className="relative scroll-mt-20 mb-44" id={sectionName}>
       <p
         className="z-2 lg:hidden text-md font-extrabold font-mono   -mx-6 px-6 text-subheading w-[screen]
        sticky top-0 pt-4 pb-6  backdrop-blur-lg
