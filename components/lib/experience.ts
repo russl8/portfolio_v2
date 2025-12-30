@@ -9,7 +9,7 @@ export const experience: Array<Experience> = [
     position: "Software Developer Intern",
     company: "RBC Borealis",
     description:
-      "Platform Engineering — Took a batch processing system for event count metadata to production, adding features such as audit trails, backfills, reprocessing, and soft deletions. Also took a Python-based BSDRF chargeback document automation from 0→1, leading design, MVP implementation, deployment, and PIV.",
+      "Platform Engineering — Took a batch processing system for event count metadata to production, adding features such as audit trails, backfills, reprocessing, and soft deletions. Also took a Python-based chargeback document automation from 0→1, leading design, MVP implementation, deployment, and PIV.",
 
     // "Built and maintained core batch-processing systems and internal services supporting data ingestion and operational workflows.",
     technologies: [
