@@ -9,23 +9,13 @@ const AboutSection = () => {
     <Section sectionName="about" onEnter={context.setCurrentSection}>
       <div className=" font-sans text-secondary">
         <p>
-          Hi! I'm a Computer Science student at York University, currently working at{" "}
-          <MyLink
-            text="RBC Borealis"
-            url="https://rbcborealis.com/applications/lumina-platform/"
-          />{" "}
-          where I'm developing a backend data aggregation service that processes metadata
-          from multiple source systems using Spring Boot and Apache Spark.
-        </p>
-        <br></br>
-        <p>
-        I’ve had the opportunity to build software across a range of contexts from
+        Hi! I'm a Computer Science student at York University and
+        I’ve had the opportunity to build software across a range of contexts, from
         student-led initiatives like my school’s hackathon to internships across
         multiple teams at larger organizations and startups.
       </p>
       <br></br>
-      <p>In my spare time, I'm usually playing the guitar, running, kickboxing, or looking for a new restaurant to try!</p> 
-
+      <p>In my spare time, I'm usually playing the guitar, running, or looking for a new restaurant to try!</p> 
       </div>
     </Section>
   );
