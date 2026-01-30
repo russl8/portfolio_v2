@@ -37,19 +37,6 @@ export const experience: Array<Experience> = [
     logoPath: "/rbclogo.jpeg",
   },
   {
-    startMonth: "05",
-    startYear: 2025,
-    endMonth: "08",
-    endYear: 2025,
-    position: "Software Engineering Intern",
-    company: "Aeroport AI",
-    description:
-      "Developed document processing pipelines using OCR technologies, added features to existing services, and migrated UI from Angular to React.",
-    technologies: ["TypeScript", "React", "Vert.x", "PostgreSQL", "Python"],
-    websiteUrl: "https://www.aeroport.ai",
-    logoPath: "/aeroportailogo.jpeg",
-  },
-  {
     startMonth: "09",
     startYear: 2024,
     endMonth: "12",
