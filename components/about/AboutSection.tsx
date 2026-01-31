@@ -15,7 +15,7 @@ const AboutSection = () => {
         multiple teams at larger organizations and startups.
       </p>
       <br></br>
-      <p>In my spare time, I'm usually playing the guitar, running, or looking for a new restaurant to try!</p> 
+      <p>In my spare time, I'm usually playing the guitar, running, or looking for new restaurants to try!</p> 
       </div>
     </Section>
   );
