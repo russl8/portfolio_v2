@@ -8,8 +8,7 @@ export const experience: Array<Experience> = [
     endYear: 2026,
     position: "Software Engineering Intern",
     company: "RBC Borealis",
-    description:
-      "Event Engine - Building multi-agent pipelines with LangGraph",
+    description: "Event Engine - Building multi-agent pipelines with LangGraph",
     technologies: ["Python", "Kafka", "LangGraph"],
     websiteUrl: "https://www.rbcborealis.com",
     logoPath: "/rbcborealislogo.jpeg",
@@ -37,27 +36,15 @@ export const experience: Array<Experience> = [
     logoPath: "/rbclogo.jpeg",
   },
   {
-    startMonth: "09",
+    startMonth: "05",
     startYear: 2024,
     endMonth: "12",
     endYear: 2024,
     position: "Software Engineering Intern",
-    company: "RBC Borealis",
-    description:
-      "Incubator - Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).",
-    technologies: ["Python", "AWS SageMaker"],
-    websiteUrl: "https://www.rbcborealis.com",
-    logoPath: "/rbcborealislogo.jpeg",
-  },
-  {
-    startMonth: "05",
-    startYear: 2024,
-    endMonth: "08",
-    endYear: 2024,
-    position: "Software Engineering Intern",
     company: "Royal Bank of Canada (RBC)",
-    description:
-      "Enterprise Data Architecture - Leveraged vector databases to build a proof of concept for a text-to-SQL application.",
+    description: `Term 1: Enterprise Data Architecture - Leveraged vector databases (pgvector) to build a proof of concept for a text-to-SQL application.\n
+      Term 2: Incubator - Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).
+      `,
     technologies: ["Python", "LangChain", "PostgreSQL"],
     websiteUrl: "https://www.rbc.com",
     logoPath: "/rbclogo.jpeg",
@@ -70,7 +57,7 @@ export const experience: Array<Experience> = [
     position: "Software Developer",
     company: "Computing Students Hub' at York University",
     description:
-      "Built and maintained internal web tools supporting student services, including a social platform, hackathon landing pages, and dashboards used by 400+ users.",
+      "Built and maintained internal web tools supporting student services, including a social platform, hackathon landing pages, and dashboards used by 500+ users.",
     technologies: ["TypeScript", "React", "Next.js"],
     websiteUrl: "https://2024.ctrlhackdel.com/",
     logoPath: "/cshublogo.jpeg",
