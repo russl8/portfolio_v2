@@ -69,36 +69,48 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         {/* company, position, date */}
         <div className="w-full">
           <span className="flex flex-row justify-between">
-            <Link
-
-              target="_blank"
-              href={experience.websiteUrl}
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-            >
+            {isModal ? (
+              <Link
+                target="_blank"
+                href={experience.websiteUrl}
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+                <p
+                  className={cn(
+                    "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
+                    "hover:opacity-40 transition-opacity duration-300",
+                  )}
+                >
+                  {experience.company}
+                  <MoveUpRight
+                    className={cn([
+                      "ml-1 w-4 font-bold align-bottom self-end",
+                      "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
+                      " ",
+                    ])}
+                  />
+                </p>
+              </Link>
+            ) : (
               <p
                 className={cn(
                   "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
-                  "hover:opacity-40 transition-opacity duration-300"
-
-                  // isModal && ["text-xl"],
+                  "hover:opacity-40 transition-opacity duration-300",
                 )}
               >
                 {experience.company}
                 <MoveUpRight
-                  className={cn(
-                    [
-                      "ml-1 w-4 font-bold align-bottom self-end",
-                      "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
-                      " ",
-                    ],
-                    isModal && ["hidden"],
-                    !isModal && "  hidden lg:block",
-                  )}
+                  className={cn([
+                    "ml-1 w-4 font-bold align-bottom self-end",
+                    "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
+                    " ",
+                    "hidden lg:block",
+                  ])}
                 />
               </p>
-            </Link>
+            )}
             <p
               className={cn([
                 "text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center",
