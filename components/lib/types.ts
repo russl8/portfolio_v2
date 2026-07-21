@@ -19,3 +19,9 @@ export type Project = {
     websiteUrl:string,
     technologies: Array<string>
 }
+
+export type Photo = {
+    id: string,
+    caption: string,
+    description: string,
+}
