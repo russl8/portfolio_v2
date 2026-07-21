@@ -9,9 +9,13 @@ import { useState } from "react";
 import type { SectionName } from "@/components/lib/types";
 import ExperienceSection from "@/components/experience/ExperienceSection";
 import ProjectSection from "@/components/projects/ProjectSection";
+import EtcSection from "@/components/etc/EtcSection";
+import FadeOverlay from "@/components/components/FadeOverlay";
+import { usePageTransition } from "@/components/lib/usePageTransition";
 
 export default function Home() {
   const [currentSection, setCurrentSection] = useState<SectionName>("about");
+  const { visible } = usePageTransition();
 
   return (
     <NavContext.Provider value={{ currentSection, setCurrentSection }}>
@@ -23,8 +27,10 @@ export default function Home() {
           <AboutSection />
           <ExperienceSection />
           <ProjectSection />
+          <EtcSection />
         </div>
       </div>
+      <FadeOverlay visible={visible} />
     </NavContext.Provider>
   );
 }

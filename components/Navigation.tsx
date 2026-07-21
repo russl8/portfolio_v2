@@ -12,6 +12,7 @@ const Navigation = () => {
         <NavLink linkText="about" />
         <NavLink linkText="experience" />
         <NavLink linkText="projects" />
+        <NavLink linkText="etc" />
       </div>
       <Socials/>
     </nav>
