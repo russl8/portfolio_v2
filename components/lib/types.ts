@@ -1,4 +1,4 @@
-export type SectionName = "about" | "experience" | "projects"
+export type SectionName = "about" | "experience" | "projects" | "etc"
 
 export type Experience = {
     startMonth: string,
@@ -22,6 +22,7 @@ export type Project = {
 
 export type Photo = {
     id: string,
+    src: string,
     caption: string,
     description: string,
 }
