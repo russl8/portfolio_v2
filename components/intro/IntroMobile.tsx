@@ -3,7 +3,7 @@ import Headshot from "../components/Headshot";
 export default function IntroMobile() {
   return (
     <div className="lg:hidden mb-10">
-      <Headshot size={100} />
+      <Headshot size={200} />
 
       <h1 className="font-bold flex space-x-4">
         <p className="text-header text-4xl">Russell Liu</p>
