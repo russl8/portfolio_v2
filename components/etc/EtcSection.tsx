@@ -27,7 +27,7 @@ const EtcSection = () => {
         </div>
         <br></br>
         <div>
-          I also play a little of guitar (acoustic and electric) as well. I'm
+          I also play a little bit of guitar (acoustic and electric) as well. I'm
           currently learning Polyhia's <i>The Worst</i>, but my favourite songs
           to play are BTS' <i>Life Goes On</i> and Tommy Emmanuel's{" "}
           <i>Angelina</i>.
