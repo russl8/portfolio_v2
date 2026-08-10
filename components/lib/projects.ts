@@ -9,6 +9,12 @@ export const projects: Project[] = [
     technologies: ["Java", "Spring Boot","TypeScript","React", "ANTLR"],
   },
   {
+    name: "Self-healing Anomaly Detection Service",
+    description:"A platform featuring a mock data stream taking points at random from the AWS Cloudwatch Dataset with an Isolation Forest anomaly detection model that can auto-detect deviations in data distribution and has self-retraining capabilities.",
+    websiteUrl: "https://github.com/russl8/serv-monitor",
+    technologies: ["Python", "FastAPI", "Redis","scikit-learn", "TypeScript", "React"],
+  },
+  {
     name: "Workout Tracker",
     description:
       "Personal workout tracker with streak visualizations, fine-tuned LLM (OpenAI) feedback, and caching/rate-limiting.",
