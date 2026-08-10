@@ -21,7 +21,7 @@ const ProjectSection = () => {
     <table className="w-full">
       <thead className="text-subheading text-base font-bold">
         <tr className="">
-          <th className="py-3 text-left">Project</th>
+          <th className="px-2 py-3 text-left">Project</th>
           <th className="py-3 px-2 text-left">Description</th>
           <th className="py-3 text-left">Built with</th>
         </tr>

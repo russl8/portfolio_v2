@@ -17,7 +17,8 @@ export type Project = {
     name: string,
     description: string,
     websiteUrl:string,
-    technologies: Array<string>
+    technologies: Array<string>,
+    images: Array<string>,
 }
 
 export type Photo = {

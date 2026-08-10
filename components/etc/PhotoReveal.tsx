@@ -49,7 +49,7 @@ const PhotoReveal = ({ text, photo }: PhotoRevealProps) => {
           onClick={() => setModalOpen(false)}
         >
           <div
-            className="max-w-2xl w-full max-h-full overflow-y-auto"
+            className="max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl w-full max-h-full overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative aspect-4/3 w-full bg-secondary/10">
@@ -57,7 +57,7 @@ const PhotoReveal = ({ text, photo }: PhotoRevealProps) => {
                 src={photo.src}
                 alt={photo.caption}
                 fill
-                style={{ objectFit: "cover" }}
+                style={{ objectFit: "contain" }}
               />
             </div>
             <p className="mt-3 sm:mt-4 text-subheading text-xs sm:text-sm font-bold">
