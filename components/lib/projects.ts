@@ -17,6 +17,13 @@ export const projects: Project[] = [
     images: ["/serv_monitor_0.png", "/serv_monitor_1.png"],
   },
   {
+    name: "Traffic Sign Identifier",
+    description:"A Convolutional Neural Network (CNN) that classifies road signs, using the the German Traffic Sign Recognition Benchmark (GTSRB) dataset, containing ~30000 images of 43 different road signs, using OpenCV and TensorFlow.",
+    websiteUrl: "https://github.com/russl8/traffic-sign-identifier",
+    technologies: ["Python", "TensorFlow", "OpenCV"],
+    images: ["/traffic_0.png"],
+  },
+  {
     name: "Workout Tracker",
     description:
       "Personal workout tracker with streak visualizations, fine-tuned LLM (OpenAI) feedback, and caching/rate-limiting.",
