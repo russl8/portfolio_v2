@@ -8,8 +8,16 @@ export const experience: Array<Experience> = [
     endYear: 2026,
     position: "Software Engineering Intern",
     company: "RBC Borealis",
-    description: "Event Engine - Building multi-agent pipelines with LangGraph",
-    technologies: ["Python", "Kafka", "LangGraph"],
+    description:
+      "Event Engine — Led development of two features for an internal agentic platform. Spent most of the term on anomaly detection: a high-latency publishing service, a low-latency LangGraph agent, an outbox connecting the two, and Isolation Forest model training.",
+    technologies: [
+      "Python",
+      "TypeScript",
+      "Kafka",
+      "LangGraph",
+      "Redis",
+      "scikit-learn",
+    ],
     websiteUrl: "https://www.rbcborealis.com",
     logoPath: "/rbcborealislogo.jpeg",
   },
@@ -21,7 +29,7 @@ export const experience: Array<Experience> = [
     position: "Software Engineering Intern",
     company: "Royal Bank of Canada (RBC)",
     description:
-      "Platform Engineering — Took a batch processing system for event count metadata to production, adding features such as audit trails, backfills, reprocessing, and soft deletions. Also took a Python-based chargeback document automation from 0→1, leading design, MVP implementation, deployment, and PIV.",
+      "Platform Engineering — Took a batch service for event metadata (100+ source systems) to production: a Postgres audit layer replacing marker-file tracking, run numbers per file type and day for idempotent reprocessing, and a nightly job to retry failures. Also owned an internal billing service from design to deploy.",
 
     // "Built and maintained core batch-processing systems and internal services supporting data ingestion and operational workflows.",
     technologies: [
@@ -42,10 +50,10 @@ export const experience: Array<Experience> = [
     endYear: 2024,
     position: "Software Engineering Intern",
     company: "Royal Bank of Canada (RBC)",
-    description: `Term 1: Enterprise Data Architecture - Leveraged vector databases (pgvector) to build a proof of concept for a text-to-SQL application.\n
-      Term 2: Incubator - Used locally hosted LLMs to automate SOP document extraction into structured components (e.g., mapping content to JSON categories).
+    description: `Term 1: Enterprise Data Architecture — Built a text-to-SQL proof of concept: offline table summaries embedded into pgvector, vector search over candidates, and a rerank pass to fit a limited context window.\n
+      Term 2: Incubator — Built the table extraction stage of a document parsing pipeline: docx to HTML to JSON, a styling-weighted heuristic for table titles, and a TF-IDF matcher in place of a per-step model call.
       `,
-    technologies: ["Python", "LangChain", "PostgreSQL"],
+    technologies: ["Python", "LangChain", "PostgreSQL", "pgvector"],
     websiteUrl: "https://www.rbc.com",
     logoPath: "/rbclogo.jpeg",
   },
@@ -55,10 +63,10 @@ export const experience: Array<Experience> = [
     endMonth: "11",
     endYear: 2024,
     position: "Software Developer",
-    company: "Computing Students Hub' at York University",
+    company: "Computing Students Hub at York University",
     description:
-      "Built and maintained internal web tools supporting student services, including a social platform, hackathon landing pages, and dashboards used by 500+ users.",
-    technologies: ["TypeScript", "React", "Next.js"],
+      "Built the frontend for a hackathon platform used by 500+ students: dashboards, landing pages, and reusable components (calendars, paginated charts, Zod-validated forms).",
+    technologies: ["TypeScript", "React", "Next.js", "Zod"],
     websiteUrl: "https://2024.ctrlhackdel.com/",
     logoPath: "/cshublogo.jpeg",
   },
