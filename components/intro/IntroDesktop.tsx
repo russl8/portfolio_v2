@@ -3,7 +3,7 @@ import Headshot from "../components/Headshot";
 export default function IntroDesktop() {
   return (
     <div className="hidden lg:block">
-      <Headshot size={150} />
+      <Headshot size={165} className="xl:w-[190px]! xl:h-[190px]!" />
 
       <h1 className="font-bold flex space-x-4">
         <p className="text-header text-5xl ">Russell Liu</p>
