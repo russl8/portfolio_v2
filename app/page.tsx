@@ -9,7 +9,7 @@ import { useState } from "react";
 import type { SectionName } from "@/components/lib/types";
 import ExperienceSection from "@/components/experience/ExperienceSection";
 import ProjectSection from "@/components/projects/ProjectSection";
-import EtcSection from "@/components/etc/EtcSection";
+import OtherSection from "@/components/other/OtherSection";
 import FadeOverlay from "@/components/components/FadeOverlay";
 import { usePageTransition } from "@/components/lib/usePageTransition";
 
@@ -27,7 +27,7 @@ export default function Home() {
           <AboutSection />
           <ExperienceSection />
           <ProjectSection />
-          <EtcSection />
+          <OtherSection />
         </div>
       </div>
       <FadeOverlay visible={visible} />

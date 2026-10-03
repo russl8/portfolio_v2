@@ -1,4 +1,4 @@
-export type SectionName = "about" | "experience" | "projects" | "etc"
+export type SectionName = "about" | "experience" | "projects" | "other"
 
 export type Experience = {
     startMonth: string,

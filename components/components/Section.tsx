@@ -10,7 +10,7 @@ interface SectionProps {
 
 const visibilityRatios = new Map<SectionName, number>();
 
-const sectionOrder: SectionName[] = ["about", "experience", "projects", "etc"];
+const sectionOrder: SectionName[] = ["about", "experience", "projects", "other"];
 
 const mostVisibleSection = (): SectionName | null => {
   let winner: SectionName | null = null;
@@ -53,7 +53,7 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
   return (
     <section
       ref={ref}
-      className="relative scroll-mt-20 mb-44"
+      className="relative scroll-mt-20 lg:scroll-mt-24 mb-44 lg:last:mb-0"
       id={sectionName}
     >
       <p

@@ -3,12 +3,12 @@ import Section from "../components/Section";
 import { useNavContext } from "../context/NavContext";
 import PhotoReveal from "./PhotoReveal";
 
-const EtcSection = () => {
+const OtherSection = () => {
   const context = useNavContext();
 
   return (
-    <Section sectionName="etc" onEnter={context.setCurrentSection}>
-      <div className="font-sans min-h-[60vh] text-secondary">
+    <Section sectionName="other" onEnter={context.setCurrentSection}>
+      <div className="font-sans min-h-[60vh] lg:min-h-[calc(100vh-12rem)] text-secondary">
         <div className="">
           I started running not too long ago, but I've already fallen in love
           with the way it clears my head and forces me to just breathe. I ran
@@ -27,16 +27,15 @@ const EtcSection = () => {
         </div>
         <br></br>
         <div>
-          I also play a little bit of guitar (acoustic and electric) as well. I'm
-          currently learning Polyhia's <i>The Worst</i>, but my favourite songs
+          I also play a little guitar, both acoustic and electric. I'm currently
+          learning Polyphia's <i>The Worst</i>, but my favourite songs
           to play are BTS' <i>Life Goes On</i> and Tommy Emmanuel's{" "}
           <i>Angelina</i>.
         </div>
         <br></br>
         <div>
-          One of the most rewarding experiences as of late has had to be a
-          two-week trip before my exchange semester started.
-          I visited{" "}
+          One of my most rewarding experiences lately was a two-week solo trip I took
+          before my exchange semester started. I visited{" "}
           <PhotoReveal
             text="Amsterdam"
             photo={{
@@ -53,7 +52,7 @@ const EtcSection = () => {
               id: "hamburg",
               src: "/hamburg_0.jpg",
               caption: "Hamburg, Germany",
-              description: "this was the day i finally understood why people enjoyed long walks on the beach.",
+              description: "this was the day i finally understood why people enjoy long walks on the beach.",
             }}
           />
           , and{" "}
@@ -65,8 +64,8 @@ const EtcSection = () => {
               caption: "Berlin, Germany",
               description: "view from a restaurant situated on the top level of a parking garage!",
             }}
-          />
-          , before settling in{" "}
+          />{" "}
+          before settling in{" "}
           <PhotoReveal
             text="Bonn"
             photo={{
@@ -83,4 +82,4 @@ const EtcSection = () => {
   );
 };
 
-export default EtcSection;
+export default OtherSection;
