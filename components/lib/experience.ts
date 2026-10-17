@@ -21,7 +21,7 @@ export const experience: Array<Experience> = [
     position: "Software Engineer Intern",
     company: "RBC Borealis",
     description:
-      "Built a couple of features for an internal agentic platform other engineers use day-to-day. Most of the term went into anomaly detection over a lot of Kafka traffic — some streaming services, a LangGraph agent, and swapping hand-rolled stats for an Isolation Forest.",
+      "Built features for an internal agentic platform. Developed anomaly detection services across Kafka topics, including a LangGraph agent and an Isolation Forest model.",
     technologies: [
       "Python",
       "TypeScript",
@@ -41,7 +41,7 @@ export const experience: Array<Experience> = [
     position: "Software Engineer Intern",
     company: "Royal Bank of Canada (RBC)",
     description:
-      "Took a proof-of-concept for tracking event movement across the bank and got it production-ready — a multithreaded batch service pulling metadata from a bunch of upstream systems, plus an audit layer so files could be safely reprocessed. Also built a small Python service that helps attribute billing.",
+      "Took an event-tracking proof-of-concept to production: a multithreaded batch service aggregating metadata from upstream systems, with an audit layer for idempotent reprocessing. Also built a billing attribution service.",
     technologies: [
       "Java",
       "Spring Boot",
@@ -60,8 +60,8 @@ export const experience: Array<Experience> = [
     endYear: 2024,
     position: "Software Engineer Intern",
     company: "Royal Bank of Canada (RBC)",
-    description: `Term 1: Played around with text-to-SQL — vector search to find candidate tables, then a rerank pass.\n
-      Term 2: Worked on document parsing for an automation project (now patent-pending) — mostly heuristics and some text vectorization to link references across documents.
+    description: `Term 1: Built RAG-based text-to-SQL with vector search and a re-ranking stage.\n
+      Term 2: Built document parsing algorithms for a patent-pending automation project.
       `,
     technologies: ["Python", "LangChain", "PostgreSQL", "pgvector"],
     websiteUrl: "https://www.rbc.com",
@@ -75,7 +75,7 @@ export const experience: Array<Experience> = [
     position: "Software Developer",
     company: "Computing Students Hub at York University",
     description:
-      "Built dashboards and landing pages for a hackathon platform used by a few hundred students.",
+      "Built dashboards and landing pages for a hackathon platform.",
     technologies: ["TypeScript", "React", "Next.js", "Zod"],
     websiteUrl: "https://2024.ctrlhackdel.com/",
     logoPath: "/cshublogo.jpeg",
