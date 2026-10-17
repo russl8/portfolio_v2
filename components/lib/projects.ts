@@ -4,21 +4,36 @@ export const projects: Project[] = [
   {
     name: "MiniTS",
     description:
-      "TypeScript-inspired language with an online IDE supporting basic inheritance, control flow, lists, static type-checking, scoping, variable shadowing. Uses ANTLR for AST-based semantic & syntactic analysis.",
+      "A small statically-typed language with an online IDE — inheritance, functions, scoping, shadowing, the usual.",
     websiteUrl: "https://minits-ui.vercel.app/",
     technologies: ["Java", "Spring Boot","TypeScript","React", "ANTLR"],
     images: ["/minits_0.png", "/minits_1.png"],
   },
   {
-    name: "Self-healing Anomaly Detection Service",
-    description:"A platform featuring a mock data stream taking points at random from the AWS Cloudwatch Dataset with an Isolation Forest anomaly detection model that can auto-detect deviations in data distribution and has self-retraining capabilities.",
+    name: "Self-Retraining Anomaly Detection Service",
+    description:"Watches a live metric stream through Redis and flags anomalies with an Isolation Forest, retraining itself when the data starts drifting.",
     websiteUrl: "https://github.com/russl8/serv-monitor",
     technologies: ["Python", "FastAPI", "Redis","scikit-learn", "TypeScript", "React"],
     images: ["/serv_monitor_0.png", "/serv_monitor_1.png"],
   },
   {
+    name: "Video Processing Service",
+    description:
+      "Upload a video, pub/sub kicks off transcoding, Firebase keeps track of where it's at.",
+    websiteUrl: "https://github.com/russl8/vid-player",
+    technologies: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "Express",
+      "Google Cloud Storage",
+      "Firebase",
+    ],
+    images: ["/vid_service_0.png"],
+  },
+  {
     name: "Traffic Sign Identifier",
-    description:"A Convolutional Neural Network (CNN) that classifies road signs, using the the German Traffic Sign Recognition Benchmark (GTSRB) dataset, containing ~30000 images of 43 different road signs, using OpenCV and TensorFlow.",
+    description:"A CNN that recognizes 43 kinds of road signs, trained on the GTSRB dataset.",
     websiteUrl: "https://github.com/russl8/traffic-sign-identifier",
     technologies: ["Python", "TensorFlow", "OpenCV"],
     images: ["/traffic_0.png"],
@@ -30,21 +45,6 @@ export const projects: Project[] = [
     websiteUrl: "https://github.com/russl8/untitled/",
     technologies: ["Next.js", "TypeScript", "Python","MongoDB", "Redis", "AWS S3"],
     images: [],
-  },
-
-  {
-    name: "Video Processing Service",
-    description:
-      "Cloud-native video upload/playback service using Pub/Sub and Cloud Run to trigger an automated video transcoding (to 360p) task.",
-    websiteUrl: "https://github.com/russl8/vid-player",
-    technologies: [
-      "TypeScript",
-      "Next.js",
-      "React",
-      "Express",
-      "Google Cloud Storage",
-    ],
-    images: ["/vid_service_0.png"],
   },
   {
     name: "BeGrate",
