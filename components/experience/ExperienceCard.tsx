@@ -1,63 +1,39 @@
 import Image from "next/image";
 import type { Experience } from "../lib/types";
-import { MoveUpRight } from "lucide-react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import ExperienceModal from "./ExperienceModal";
 
 interface ExperienceCardProps {
   experience: Experience;
 }
 
 const ExperienceCard = ({ experience }: ExperienceCardProps) => {
-  // mobile: full page, remove hover animation
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const closeModal = useCallback(() => setIsOpen(false), []);
 
-  const [isModal, setIsModal] = useState<boolean>(false);
-  const [isClosing, setIsClosing] = useState(false);
-
-  const closeModal = () => {
-    setIsClosing(true);
-
-    setTimeout(() => {
-      setIsModal(false);
-      setIsClosing(false);
-    });
-  };
   return (
-    // modal component
-    <div
-      className={cn(
-        isModal && ["fixed inset-0 bg-black/80 z-10 grid place-items-center"],
-      )}
-      onClick={() => {
-        if (!isModal) setIsModal(true);
-        else closeModal();
-      }}
-    >
-      {/*  regular card component */}
+    <>
       <div
         tabIndex={0}
-        onClick={(e) => isModal && e.stopPropagation()}
+        role="button"
+        onClick={() => setIsOpen(true)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setIsOpen(true);
+          }
+        }}
         className={cn(
           "group rounded-xs bg-accent/5 text-secondary",
           "transition-all duration-500",
           "lg:flex lg:flex-row px-4 py-6",
-
-          !isModal && [
-            "mb-6 lg:w-170 experience-card ",
-            "cursor-pointer hover:bg-accent/15 hover:shadow-md",
-          ],
-          isModal && [
-            "lg:w-162.5 lg:mx-0 mx-4  bg-accent/25 backdrop-blur-3xl",
-          ],
+          "mb-6 lg:w-170 experience-card",
+          "cursor-pointer hover:bg-accent/15 hover:shadow-md",
         )}
       >
         {/* icon */}
-        <div
-          className={cn(
-            "block w-15 aspect-square relative rounded-xs  overflow-hidden mr-4 self-center",
-          )}
-        >
+        <div className="block w-15 aspect-square relative rounded-xs overflow-hidden mr-4 self-center">
           <Image
             src={experience.logoPath}
             alt={experience.company}
@@ -69,81 +45,32 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
         {/* company, position, date */}
         <div className="w-full">
           <span className="flex flex-row justify-between">
-            {isModal ? (
-              <Link
-                target="_blank"
-                href={experience.websiteUrl}
-                onClick={(e) => {
-                  e.stopPropagation();
-                }}
-              >
-                <p
-                  className={cn(
-                    "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
-                    "hover:opacity-40 transition-opacity duration-300",
-                  )}
-                >
-                  {experience.company}
-                  <MoveUpRight
-                    className={cn([
-                      "ml-1 w-4 font-bold align-bottom self-end",
-                      "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
-                      " ",
-                    ])}
-                  />
-                </p>
-              </Link>
-            ) : (
-              <p
-                className={cn(
-                  "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
-                  "hover:opacity-40 transition-opacity duration-300",
-                )}
-              >
-                {experience.company}
-                <MoveUpRight
-                  className={cn([
-                    "ml-1 w-4 font-bold align-bottom self-end",
-                    "group-hover:translate-x-0.75 group-hover:-translate-y-0.75 transition-transform duration-200",
-                    " ",
-                    "hidden lg:block",
-                  ])}
-                />
-              </p>
-            )}
             <p
-              className={cn([
-                "text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center",
-              ])}
+              className={cn(
+                "flex flex-row text-header text-xs sm:text-sm md:text-lg font-semibold relative",
+              )}
             >
+              {experience.company}
+            </p>
+            <p className="text-xs lg:text-sm font-semibold text-secondary hidden lg:block self-center">
               {experience.startMonth}/{experience.startYear} -{" "}
               {experience.endMonth}/{experience.endYear}
             </p>
-            {/* add link icon with onhover animation */}
           </span>
           <p className="text-secondary text-xs sm:text-sm">
             {experience.position}
           </p>
-          <p
-            className={cn([
-              "text-xs lg:text-sm text-secondary block lg:hidden",
-            ])}
-          >
+          <p className="text-xs lg:text-sm text-secondary block lg:hidden">
             {experience.startMonth}/{experience.startYear} -{" "}
             {experience.endMonth}/{experience.endYear}
           </p>
-          {/* put this in a modal */}
-          <p
-            className={cn(
-              "text-sm pt-2 text-secondary",
-              !isModal && ["hidden"],
-            )}
-          >
-            {experience.description}
-          </p>
         </div>
       </div>
-    </div>
+
+      {isOpen && (
+        <ExperienceModal experience={experience} onClose={closeModal} />
+      )}
+    </>
   );
 };
 
