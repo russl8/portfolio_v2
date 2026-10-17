@@ -96,6 +96,36 @@ body {
   min-height: 100%;
   background: #1b2221;
   w : #9dede0;
+  isolation: isolate;
+}
+
+/* lowkey drifting line grid over the base color */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgb(157 237 224 / 0.01) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(157 237 224 / 0.01) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: bg-drift 60s linear infinite;
+}
+
+@keyframes bg-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before {
+    animation: none;
+  }
 }
 
 html {
