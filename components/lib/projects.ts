@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     name: "MiniTS",
     description:
-      "A small statically-typed language with an online IDE — inheritance, functions, scoping, shadowing, the usual.",
+      "A small statically-typed language. Features inheritance, functions, scoping, shadowing.",
     websiteUrl: "https://minits-ui.vercel.app/",
     technologies: ["Java", "Spring Boot","TypeScript","React", "ANTLR"],
     images: ["/minits_0.png", "/minits_1.png"],
@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     name: "Video Processing Service",
     description:
-      "Upload a video, pub/sub kicks off transcoding, Firebase keeps track of where it's at.",
+      "Video service connected via pub/sub.",
     websiteUrl: "https://github.com/russl8/vid-player",
     technologies: [
       "TypeScript",
