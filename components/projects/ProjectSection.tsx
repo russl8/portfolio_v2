@@ -17,7 +17,7 @@ const ProjectSection = () => {
    */
   return (
 <Section sectionName="projects" onEnter={context.setCurrentSection}>
-  <div className="rounded-xl  backdrop-blur-sm">
+  <div className="rounded-xl">
     <table className="w-full">
       <thead className="text-subheading text-base font-bold">
         <tr className="">

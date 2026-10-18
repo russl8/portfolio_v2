@@ -1,5 +1,6 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { SectionName } from "../lib/types";
+import { cn } from "@/lib/utils";
 
 interface SectionProps {
   sectionName: SectionName;
@@ -27,6 +28,18 @@ const mostVisibleSection = (): SectionName | null => {
 
 const Section = ({ sectionName, children, onEnter }: SectionProps) => {
   const ref = useRef<HTMLElement | null>(null);
+  const sentinelRef = useRef<HTMLDivElement | null>(null);
+  const [isStuck, setIsStuck] = useState(false);
+
+  // the mobile header is stuck once the zero-height sentinel above it scrolls past the top of the viewport
+  useEffect(() => {
+    if (!sentinelRef.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setIsStuck(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+    });
+    observer.observe(sentinelRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     if (!ref.current) return;
@@ -56,10 +69,13 @@ const Section = ({ sectionName, children, onEnter }: SectionProps) => {
       className="relative scroll-mt-20 lg:scroll-mt-24 mb-44 lg:last:mb-0"
       id={sectionName}
     >
+      <div ref={sentinelRef} aria-hidden />
       <p
-        className="z-2 lg:hidden text-md font-extrabold font-mono   -mx-6 px-6 text-subheading w-[screen]
-       sticky top-0 pt-4 pb-6  backdrop-blur-lg
-      "
+        className={cn(
+          "z-2 lg:hidden text-md font-extrabold font-mono -mx-6 px-6 text-subheading w-[screen]",
+          "sticky top-0 pt-4 pb-6 transition-[backdrop-filter] duration-200",
+          isStuck && "backdrop-blur-sm",
+        )}
       >
         {sectionName.toUpperCase()}
       </p>
