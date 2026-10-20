@@ -99,11 +99,10 @@ body {
   isolation: isolate;
 }
 
-/* lowkey drifting line grid over the base color */
 :root {
   --grid-bg:
-    linear-gradient(rgb(157 237 224 / 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(157 237 224 / 0.02) 1px, transparent 1px);
+    linear-gradient(rgb(157 237 224 / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(157 237 224 / 0.08) 1px, transparent 1px);
 }
 
 body::before {

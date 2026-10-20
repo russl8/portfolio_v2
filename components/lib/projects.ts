@@ -19,7 +19,7 @@ export const projects: Project[] = [
   {
     name: "Video Processing Service",
     description:
-      "Video service connected via pub/sub.",
+      "Video services (upload, transcoding) connected via pub/sub.",
     websiteUrl: "https://github.com/russl8/vid-player",
     technologies: [
       "TypeScript",
